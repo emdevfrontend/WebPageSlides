@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --color: #4388ff;
+}
+body{
+    background-color: #002D56;
+}
+
+.logo h1{
+    font-size: 2.9rem;
+    color: var(--white);
+}
+.logo span{
+    color: var(--color);
+}
+.nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 40px;
+    transition: all .4s;
+    z-index: 1;
+}
+.nav i{
+    font-size: 2.7rem;
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.nav ul li a{
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+    transition:  all .5s;
+}
+.nav ul li a:hover{
+    color: var(--color);
+}
+.menu{
+    display: none;
+    cursor: pointer
+}
+.menu .bar{
+    display: block;
+    width: 40px;
+    height: 5px;
+    border-radius: 4px;
+    background: var(--white);
+    margin: 3px auto;
+    transition: all .3s;
+}
+
+#developer{
+    background: url(./img/img1.png);
+    background-size: cover;
+    background-position: center;    background-position: center;
+}
+#medicine{
+    background: url(./img/img2.png);
+    background-size: cover;
+    background-position: center;
+}
+#business{
+    background: url(./img/img3.png);
+    background-size: cover;
+    background-position: center;
+}
+#designer{
+    background: url(./img/img4.png);
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    color: var(--white);
+}
+h2{
+    color: #fff;
+}
+p{
+    color: var(--white);
+}
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 102vh;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all 2.5s;
+    filter: blur(5px);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+}
+
+.content{
+    display: flex;
+    padding: 100px;
+    text-align: left;
+}
+.text{
+    padding: 2rem;
+}
+.text h2{
+    font-size: 2rem;
+}
+.text p{
+    font-size: 1.4rem;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.btn button{
+    padding: 0 1rem;
+    width: 100%;
+    margin: .4rem 0;
+    background-color: var(--white);
+    border: none;
+    border-radius: 1rem;
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn button:hover{
+    transform: scale(115%);
+    background-color: var(--color);
+    color: var(--white);
+    transition: .4s;
+}
+
+.screen-nav{
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 87%;
+    display: flex;
+}
+.screen-nav a{
+    text-align: center;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, .4);
+    padding: .7rem .7rem;
+    margin: 0 .4rem;
+    border-radius: 50%;
+    font-size: 1.4rem;
+}
+.screen-nav a:hover{
+    transform: scale(120%);
+    transition: .2s;    
+}
+
+
+
+@media (max-width: 800px) {
+    .nav{
+        padding: 1rem 2rem;
+    }
+    .menu{
+        padding-bottom: 1rem;
+        display: block;
+    }
+    .menu.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .menu.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 90px;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: -1px;
+        background: #002D56;
+        transition: .3s;
+        font-size: 2rem;
+    }
+    .nav-menu.active{
+        right: 0;
+    }
+    .nav a{
+        font-size: 1.4rem;
+    }
+    .nav ul{
+        gap: .2rem;
+    }
+    .item-nav{
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .text{
+        padding: 0;
+        margin: 0;
+    }
+    .btn{
+        padding: 0;
+        margin: 0;
+    }
+}
