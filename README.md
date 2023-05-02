@@ -12,7 +12,7 @@ DETAILS:<br>
 
 #
 
-#### PORTGUÊS (BR)
+#### PORTUGUÊS (BR)
 SOBRE:<br>
 - Este exemplo de página da web pode ser usado para divulgar produtos e serviços.
 - Website Responsiva
