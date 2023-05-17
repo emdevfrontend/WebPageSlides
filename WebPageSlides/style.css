@@ -35,9 +35,6 @@ body{
     transition: all .4s;
     z-index: 1;
 }
-.nav i{
-    font-size: 2.7rem;
-}
 .nav ul{
     display: flex;
     align-items: center;
