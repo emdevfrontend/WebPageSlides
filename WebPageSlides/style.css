@@ -43,13 +43,13 @@ body{
     align-items: center;
     gap: 2rem;
 }
-.nav ul li a{
+.nav a{
     color: var(--white);
     font-size: 22px;
     font-weight: 700;
     transition:  all .5s;
 }
-.nav ul li a:hover{
+.nav a:hover{
     color: var(--color);
 }
 .menu{
